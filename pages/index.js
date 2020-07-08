@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { getListsData } from '../lib/tmdbApi';
 
 export default function Home({ movies }) {
   return (
@@ -27,10 +28,7 @@ export default function Home({ movies }) {
   );
 }
 export async function getServerSideProps() {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.MOVIE_KEY}&language=en-GB&page=1&region=GB`
-  );
-  const movies = await res.json();
+  const movies = await getListsData('popular');
 
   return {
     props: {

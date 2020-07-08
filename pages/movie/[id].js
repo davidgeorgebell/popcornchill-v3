@@ -1,8 +1,9 @@
 import Layout from '../../components/Layout';
+import { imageUrl } from '../../utils/imageUrl';
 
 export default function Movie({ movieDetails }) {
   console.log(movieDetails);
-  const imageUrl = 'https://image.tmdb.org/t/p/w400/';
+
   const {
     title,
     overview,
