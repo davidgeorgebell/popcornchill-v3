@@ -10,7 +10,7 @@ export default function TopRated({ movies }) {
   );
 }
 export async function getServerSideProps() {
-  const movies = await getListsData('popular');
+  const movies = await getListsData('top_rated');
 
   return {
     props: {

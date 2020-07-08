@@ -1,9 +1,12 @@
 import { HomeLink } from './HomeLink';
+import Nav from './Nav';
 
 export default function Layout({ children, home }) {
   return (
     <div className='container'>
-      {/* ------ Main ------- */}
+      <header>
+        <Nav />
+      </header>
       <main>{children}</main>
 
       {!home ? <HomeLink home={home} /> : null}
