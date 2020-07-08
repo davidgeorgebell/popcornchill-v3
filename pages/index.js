@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 export default function Home({ movies }) {
   return (
-    <div className='container'>
+    <Layout home>
       <Head>
         <title>popcornchill.com</title>
         <link rel='icon' href='/favicon.ico' />
@@ -22,7 +23,7 @@ export default function Home({ movies }) {
           ))}
         </div>
       </main>
-    </div>
+    </Layout>
   );
 }
 export async function getServerSideProps() {
