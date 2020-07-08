@@ -1,11 +1,11 @@
 import { getListsData } from '../lib/tmdbApi';
 import Layout from '../components/Layout';
-import MovieList from '../components/MovieList';
+import ListData from '../components/ListData';
 
 export default function TopRated({ movies }) {
   return (
     <Layout>
-      <MovieList movies={movies} />
+      <ListData movies={movies} />
     </Layout>
   );
 }

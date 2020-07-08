@@ -16,16 +16,18 @@ export default function Movie({ movieDetails }) {
 
   return (
     <Layout>
-      <img src={`${imageUrl}${poster_path}`} alt={title} />
-      <h2>{title}</h2>
-      <p>{overview}</p>
-      <p>{vote_average} / 10</p>
-      <p>Runtime: {runtime}mins</p>
-      <ul>
-        {movieDetails.genres.map(genre => (
-          <li>{genre.name}</li>
-        ))}
-      </ul>
+      <div>
+        <img src={`${imageUrl}${poster_path}`} alt={title} />
+        <h2>{title}</h2>
+        <p>{overview}</p>
+        <p>{vote_average} / 10</p>
+        <p>Runtime: {runtime}mins</p>
+        <ul>
+          {movieDetails.genres.map(genre => (
+            <li>{genre.name}</li>
+          ))}
+        </ul>
+      </div>
     </Layout>
   );
 }

@@ -1,5 +1,4 @@
-import styles from '../styles/Button.module.css';
-import { Children } from 'react';
+import styles from '../styles/utils.module.css';
 
 export function Button({ children }) {
   return (
@@ -7,7 +6,7 @@ export function Button({ children }) {
       type='button'
       // Note how the "error" class is accessed as a property on the imported
       // `styles` object.
-      className={styles.alpha}>
+      className={styles.alphaBtn}>
       {children}
     </button>
   );
