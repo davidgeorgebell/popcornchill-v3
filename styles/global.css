@@ -99,6 +99,29 @@ p {
   margin-bottom: var(--flow-space);
 }
 
+/* ------ Responsive Type ---------- */
+
+@media (min-width: 640px) {
+  body {
+    font-size: 19px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1280px) {
+  body {
+    font-size: 22px;
+  }
+}
+
 .title {
   font-size: 4vw;
   margin-bottom: var(--flow-mid);
@@ -107,4 +130,13 @@ p {
   .title {
     font-size: 10vw;
   }
+}
+
+.container {
+  margin: 0 auto;
+  padding: var(--flow-space) var(--flow-mid);
+}
+.center {
+  display: grid;
+  place-items: center;
 }
