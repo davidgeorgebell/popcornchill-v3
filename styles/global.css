@@ -1,0 +1,110 @@
+:root {
+  --font-plain: Arial, 'Helvetica', sans-serif;
+  --font-fancy: Georgia, serif;
+  --font-mono: menlo, Monaco, monospace;
+  --bg: #000;
+  --bg-darkish: #101216;
+  --fg: #fff;
+  --accents-1: #111111;
+  --accents-2: #333333;
+  --accents-3: #444444;
+  --accents-4: #666666;
+  --accents-5: #888888;
+  --accents-6: #999999;
+  --accents-7: #eaeaea;
+  --accents-8: #fafafa;
+  --error: #ff0000;
+  --error-light: #ff3333;
+  --erro-dark: #e60000;
+  --alpha: #0070f3;
+  --alpha-light: #3291ff;
+  --alpha-dark: #0761d1;
+  --bravo: #f5a623;
+  --bravo-light: #f7b955;
+  --bravo-dark: #ab570a;
+  --charlie: #50e3c2;
+  --charlie-light: #79ffe1;
+  --charlie-dark: #29bc9b;
+  --delta: #7928ca;
+  --delta-light: #8a63d2;
+  --delta-dark: #4c2889;
+  --echo: #f81ce5;
+  --foxtrot: #ff0080;
+  --golf: #eb367f;
+  --rounded: 8px;
+  --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --transition1s: all 100ms ease-in-out;
+  --transition2s: all 200ms ease-in-out;
+  --flow-space: 1.75rem;
+  --flow-mid: 3.5rem;
+  --flow-large: 5rem;
+  --flow-massive: 10rem;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--font-plain);
+  color: var(--accents-1);
+  background: var(--fg);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.5px;
+  color: var(--accents-1);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+ol[class],
+li,
+ul,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin-bottom: var(--flow-space);
+}
+
+.title {
+  font-size: 4vw;
+  margin-bottom: var(--flow-mid);
+}
+@media (max-width: 678px) {
+  .title {
+    font-size: 10vw;
+  }
+}

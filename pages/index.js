@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Button } from '../components/Button';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
 
       <main>
         <h1 className='title'>Popcorn chill</h1>
+        <Button />
       </main>
     </div>
   );

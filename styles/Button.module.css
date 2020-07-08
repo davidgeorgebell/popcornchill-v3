@@ -1,0 +1,29 @@
+.alpha {
+  white-space: nowrap;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  background: var(--alpha);
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: var(--fg);
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  border: none;
+}
+.alpha:hover {
+  transform: translateY(-1px);
+  background: var(--alpha-light);
+  cursor: pointer;
+}
+.bravo {
+  background: var(--echo);
+  color: var(--fg);
+}
+.bravo:hover {
+  background: var(--echo-light);
+}
