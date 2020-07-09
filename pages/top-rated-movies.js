@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { getListsData } from '../lib/tmdbApi';
 import Layout from '../components/Layout';
 import ListData from '../components/ListData';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import { InfiniteScrolling } from '../components/InfiniteScrolling';
 
 export default function TopRated() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -36,13 +36,12 @@ export default function TopRated() {
     <Layout>
       <h1>Top Rated Movies</h1>
       {media && lengthOfMedia && (
-        <InfiniteScroll
-          dataLength={lengthOfMedia}
-          next={() => setPageNumber(pageNumber => pageNumber + 1)}
-          hasMore={true}
-          loader={<h4>Loading...</h4>}>
+        <InfiniteScrolling
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+          lengthOfMedia={lengthOfMedia}>
           <ListData media={media} />
-        </InfiniteScroll>
+        </InfiniteScrolling>
       )}
     </Layout>
   );
