@@ -2,24 +2,27 @@ import Link from 'next/link';
 
 import { imageUrl } from '../utils/imageUrl';
 
-function ListData({ movies }) {
+function ListData({ media }) {
   return (
-    <>
-      {movies.results.map((movie, index) => (
-        <Link href='/movie/[id]' as={`/movie/${movie.id}`} key={index}>
+    <div className='list-data'>
+      {media.results.map((media, index) => (
+        <Link href='/movie/[id]' as={`/movie/${media.id}`} key={index}>
           <a>
             <div className='card'>
               <img
-                className=''
-                src={`${imageUrl}${movie.poster_path}`}
-                alt={movie.title}
+                className='card-image'
+                src={`${imageUrl}${media.poster_path}`}
+                alt={media.title}
               />
-              <p>{movie.title}</p>
+              <div className='center'>
+                <h3>{media.title}</h3>
+                <p>{media.vote_average}</p>
+              </div>
             </div>
           </a>
         </Link>
       ))}
-    </>
+    </div>
   );
 }
 export default ListData;

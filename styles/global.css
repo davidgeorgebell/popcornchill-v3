@@ -31,7 +31,7 @@
   --echo: #f81ce5;
   --foxtrot: #ff0080;
   --golf: #eb367f;
-  --rounded: 8px;
+  --rounded: 20px;
   --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
   --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
   --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
@@ -122,9 +122,11 @@ p {
   }
 }
 
+/* ========================= Utils ========================= */
+
 .container {
   margin: 0 auto;
-  padding: var(--flow-space) var(--flow-mid);
+  padding: var(--flow-space) var(--flow-space);
 }
 
 .title {
@@ -142,7 +144,15 @@ p {
   place-items: center;
 }
 .card {
+  min-width: auto;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--rounded);
   box-shadow: var(--shadow-medium);
+  min-height: 150px;
+  min-width: 150px;
 }
 
 .alpha-btn {
@@ -171,4 +181,29 @@ p {
 }
 .bravo-btn:hover {
   background: var(--echo-light);
+}
+
+/* =================== Home ===================== */
+
+.home-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.scroller-wrapper {
+  max-width: 1300px;
+}
+.scroller {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.home-card {
+  padding: 0 1em;
+}
+
+/* List Data ====================== */
+
+.list-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
 }

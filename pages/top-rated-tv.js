@@ -2,19 +2,19 @@ import { getListsData } from '../lib/tmdbApi';
 import Layout from '../components/Layout';
 import ListData from '../components/ListData';
 
-export default function Popular({ movies }) {
+export default function TopRated({ tv }) {
   return (
     <Layout>
-      <ListData movies={movies} />
+      <ListData media={tv} />
     </Layout>
   );
 }
 export async function getServerSideProps() {
-  const movies = await getListsData('popular');
+  const tv = await getListsData('tv', 'top_rated');
 
   return {
     props: {
-      movies,
+      tv,
     },
   };
 }
