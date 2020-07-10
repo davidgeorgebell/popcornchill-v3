@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../components/Layout';
 import ListData from '../components/ListData';
@@ -8,7 +8,11 @@ import { useFetchMedia } from '../hooks/useFetchMedia';
 export default function TopRated() {
   const [pageNumber, setPageNumber] = useState(1);
 
-  const { media } = useFetchMedia(pageNumber);
+  const { media, error } = useFetchMedia(pageNumber);
+
+  if (error) {
+    return <h1>Error</h1>;
+  }
 
   const lengthOfMedia = media && media.length;
 
