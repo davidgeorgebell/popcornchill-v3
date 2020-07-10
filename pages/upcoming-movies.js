@@ -13,7 +13,9 @@ export default function Upcoming() {
   if (error) {
     return <h1>Error</h1>;
   }
-
+  if (!media.length) {
+    return null;
+  }
   return (
     <Layout>
       <h1>Upcoming Movies</h1>
