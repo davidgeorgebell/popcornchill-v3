@@ -18,7 +18,6 @@ export default function PopularTv() {
   }
   return (
     <Layout>
-      <h1>Top Rated Movies</h1>
       {media && media.length && (
         <InfiniteScrolling
           pageNumber={pageNumber}

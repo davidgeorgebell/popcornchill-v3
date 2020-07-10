@@ -24,11 +24,11 @@ export default function Nav() {
             </Link>
           </li>
           <li>
-            <Link href='/upcoming-movies'>
-              <a>Upcoming Movies</a>
+            <Link href='/search'>
+              <a>Search</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href='/top-rated-tv'>
               <a>Top Rated TV</a>
             </Link>
@@ -37,7 +37,7 @@ export default function Nav() {
             <Link href='/popular-tv'>
               <a>Popular TV</a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

@@ -24,7 +24,7 @@ export default function TopRated() {
           pageNumber={pageNumber}
           setPageNumber={setPageNumber}
           lengthOfMedia={media.length}>
-          <ListData media={media} type='movie' />
+          <ListData media={media} />
         </InfiniteScrolling>
       )}
     </Layout>

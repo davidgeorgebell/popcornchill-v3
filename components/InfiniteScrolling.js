@@ -11,8 +11,7 @@ export function InfiniteScrolling({
     <InfiniteScroll
       dataLength={lengthOfMedia}
       next={() => setPageNumber(pageNumber => pageNumber + 1)}
-      hasMore={true}
-      loader={<h4>Loading...</h4>}>
+      hasMore={true}>
       {children}
     </InfiniteScroll>
   );
