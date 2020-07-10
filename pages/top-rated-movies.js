@@ -8,35 +8,23 @@ import { useFetchMedia } from '../hooks/useFetchMedia';
 export default function TopRated() {
   const [pageNumber, setPageNumber] = useState(1);
 
-  const { media, error } = useFetchMedia(pageNumber);
+  const { media, error } = useFetchMedia('movie', 'top_rated', pageNumber);
 
   if (error) {
     return <h1>Error</h1>;
   }
 
-  const lengthOfMedia = media && media.length;
-
   return (
     <Layout>
       <h1>Top Rated Movies</h1>
-      {media && lengthOfMedia && (
+      {media && media.length && (
         <InfiniteScrolling
           pageNumber={pageNumber}
           setPageNumber={setPageNumber}
-          lengthOfMedia={lengthOfMedia}>
-          <ListData media={media} />
+          lengthOfMedia={media.length}>
+          <ListData media={media} type='movie' />
         </InfiniteScrolling>
       )}
     </Layout>
   );
 }
-
-// export async function getServerSideProps(page) {
-//   const movies = await getListsData('movie', 'top_rated', page);
-
-//   return {
-//     props: {
-//       movies,
-//     },
-//   };
-// }

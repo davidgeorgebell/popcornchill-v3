@@ -1,20 +1,30 @@
-import { getListsData } from '../lib/tmdbApi';
+import React, { useState } from 'react';
+
 import Layout from '../components/Layout';
 import ListData from '../components/ListData';
+import { InfiniteScrolling } from '../components/InfiniteScrolling';
+import { useFetchMedia } from '../hooks/useFetchMedia';
 
-export default function TopRated({ tv }) {
+export default function TopRatedTv() {
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const { media, error } = useFetchMedia('tv', 'top_rated', pageNumber);
+
+  if (error) {
+    return <h1>Error</h1>;
+  }
+
   return (
     <Layout>
-      <ListData media={tv} />
+      <h1>Top Rated TV</h1>
+      {media && media.length && (
+        <InfiniteScrolling
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+          lengthOfMedia={media.length}>
+          <ListData media={media} type='tv' />
+        </InfiniteScrolling>
+      )}
     </Layout>
   );
-}
-export async function getServerSideProps() {
-  const tv = await getListsData('tv', 'top_rated');
-
-  return {
-    props: {
-      tv,
-    },
-  };
 }

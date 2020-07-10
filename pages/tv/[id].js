@@ -2,8 +2,6 @@ import Layout from '../../components/Layout';
 import { imageUrl } from '../../utils/imageUrl';
 
 export default function Tv({ tvDetails }) {
-  console.log(tvDetails);
-
   const {
     title,
     overview,
@@ -23,8 +21,8 @@ export default function Tv({ tvDetails }) {
         <p>{vote_average} / 10</p>
         <p>Runtime: {runtime}mins</p>
         <ul>
-          {tvDetails.genres.map(genre => (
-            <li>{genre.name}</li>
+          {tvDetails.genres.map((genre, index) => (
+            <li key={index}>{genre.name}</li>
           ))}
         </ul>
       </div>
@@ -34,7 +32,7 @@ export default function Tv({ tvDetails }) {
 
 export async function getServerSideProps({ params }) {
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/${params.id}?api_key=${process.env.MOVIE_KEY}&language=en-GB`
+    `https://api.themoviedb.org/3/tv/${params.id}?api_key=${process.env.API_KEY}&language=en-GB`
   );
   const tvDetails = await res.json();
 

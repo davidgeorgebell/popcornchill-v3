@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 import { imageUrl } from '../utils/imageUrl';
 
-function ListData({ media }) {
+function ListData({ media, type }) {
   return (
     <div className='list-data'>
       {media &&
         media.map((media, index) => (
-          <Link href='/movie/[id]' as={`/movie/${media.id}`} key={index}>
+          <Link href={`/${type}/[id]`} as={`/${type}/${media.id}`} key={index}>
             <a>
               <div className='card'>
                 <img

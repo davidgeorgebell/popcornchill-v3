@@ -29,7 +29,6 @@ export default function Home({ tv, movies }) {
                         src={`${imageUrl}${movie.poster_path}`}
                         alt={movie.title}
                       />
-                      <p>{movie.title}</p>
                     </div>
                   </a>
                 </Link>
