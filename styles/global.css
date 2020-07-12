@@ -97,6 +97,7 @@ h4 {
 
 p {
   margin: 0;
+  color: var(--accents-3);
 }
 
 /* ------ Responsive Type ---------- */
@@ -131,7 +132,7 @@ p {
 
 .title {
   font-size: 4vw;
-  margin-bottom: var(--flow-mid);
+  margin-bottom: var(--flow-space);
   margin-top: var(--flow-space);
 }
 @media (max-width: 678px) {
@@ -250,6 +251,7 @@ p {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: var(--flow-space);
 }
 .genre-list-item {
   margin: var(--flow-space) 0;

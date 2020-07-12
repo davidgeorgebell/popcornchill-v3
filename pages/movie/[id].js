@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import { imageUrl } from '../../utils/imageUrl';
 import { useContext } from 'react';
 import { GenreContext } from '../../contexts/GenreContext';
+import { formatDate } from '../../utils/formatDate';
 
 export default function Movie({ movieDetails }) {
   const { addGenreToState } = useContext(GenreContext);
@@ -16,6 +17,7 @@ export default function Movie({ movieDetails }) {
     poster_path,
     budget,
     revenue,
+    release_date,
   } = movieDetails;
 
   return (
@@ -23,9 +25,9 @@ export default function Movie({ movieDetails }) {
       <div className='movie-page-wrapper'>
         <div className='movie-page-content-wrapper'>
           <h1 className='title'>{title}</h1>
-          <p>{overview}</p>
           <p>{vote_average} / 10</p>
           <p>Runtime: {runtime}mins</p>
+          <p>Release: {formatDate(release_date)}</p>
           <ul className='genre-list'>
             {movieDetails.genres.map((genre, index) => (
               <li key={index} className='genre-list-item'>
@@ -39,6 +41,8 @@ export default function Movie({ movieDetails }) {
               </li>
             ))}
           </ul>
+          <h3 className='title'>Plot Summary</h3>
+          <p>{overview}</p>
         </div>
         <div className='movie-page-image-wrapper'>
           <img
