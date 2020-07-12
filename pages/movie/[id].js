@@ -25,9 +25,16 @@ export default function Movie({ movieDetails }) {
       <div className='movie-page-wrapper'>
         <div className='movie-page-content-wrapper'>
           <h1 className='title'>{title}</h1>
-          <p>{vote_average} / 10</p>
-          <p>Runtime: {runtime}mins</p>
-          <p>Release: {formatDate(release_date)}</p>
+          <div className='movie-stats'>
+            <p>
+              {vote_average}/10{' '}
+              <span aria-label='star' role='img'>
+                ⭐️
+              </span>
+            </p>{' '}
+            <p>{runtime}mins</p>
+            <p>{formatDate(release_date)}</p>
+          </div>
           <ul className='genre-list'>
             {movieDetails.genres.map((genre, index) => (
               <li key={index} className='genre-list-item'>

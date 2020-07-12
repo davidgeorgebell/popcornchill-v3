@@ -18,14 +18,14 @@ export default function Home({ popularMovies, topRated, genres }) {
       </Head>
 
       <main>
-        <h1 className=' title'>Popcorn chill</h1>
+        <h1 className='center title'>Popcorn chill</h1>
 
         <h3 className='title'>Popular Movies</h3>
         <ScrollerList media={popularMovies} />
         <h3 className='title'>Top Rated Movies</h3>
         <ScrollerList media={topRated} />
         <div className='home-genres'>
-          <ul className='genre-list '>
+          <ul className='home-genres'>
             {genres.map((genre, index) => (
               <li key={index} className='genre-list-item'>
                 <Link href='/genre/[id]' as={`/genre/${genre.id}`}>

@@ -44,6 +44,24 @@
   --flow-massive: 10rem;
 }
 
+/* ======== Scroll bar =========== */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--golf) var(--fg);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--fg);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--golf);
+  border-radius: 20px;
+}
+::selection {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
 /* Set core body defaults */
 body {
   scroll-behavior: smooth;
@@ -97,7 +115,7 @@ h4 {
 
 p {
   margin: 0;
-  color: var(--accents-3);
+  color: var(--accents-4);
 }
 
 /* ------ Responsive Type ---------- */
@@ -206,21 +224,36 @@ p {
   overflow-y: hidden;
   margin-bottom: var(--flow-mid);
 }
+.home-content-wrapper {
+  padding: 1em;
+}
 .home-card {
   padding: 0;
   margin-right: var(--flow-space);
 }
 .home-genres {
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--flow-space);
 }
 /* List Data ====================== */
 
 .list-data {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 2rem;
+}
+.list-data-link {
+  text-decoration: none;
+}
+.list-data-title {
+  margin-top: var(--flow-space);
+  font-size: 1.3em;
+}
+.list-data-rating {
+  font-size: 1.2em;
 }
 
 /* ========== movie ============== */
@@ -247,11 +280,19 @@ p {
   }
 }
 
+.movie-stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie-stats p {
+  margin-right: 1em;
+}
+
 .genre-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: var(--flow-space);
+  margin: var(--flow-space) 0;
 }
 .genre-list-item {
   margin: var(--flow-space) 0;

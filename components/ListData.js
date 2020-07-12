@@ -8,7 +8,7 @@ function ListData({ media }) {
       {media &&
         media.map((media, index) => (
           <Link href='/movie/[id]' as={`/movie/${media.id}`} key={index}>
-            <a>
+            <a className='list-data-link'>
               <div className='card'>
                 <img
                   className='card-image'
@@ -16,8 +16,13 @@ function ListData({ media }) {
                   alt={media.title}
                 />
                 <div className='center'>
-                  <h3>{media.title}</h3>
-                  <p>{media.vote_average}</p>
+                  <h3 className='list-data-title'>{media.title}</h3>
+                  <p className='list-data-rating'>
+                    {media.vote_average}{' '}
+                    <span role='img' aria-label='star'>
+                      ⭐️
+                    </span>
+                  </p>
                 </div>
               </div>
             </a>
