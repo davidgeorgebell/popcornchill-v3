@@ -25,6 +25,7 @@ export default function Search() {
 
   return (
     <Layout>
+      <h1 className='title'>Search</h1>
       <form type='submit' onSubmit={handleSubmit}>
         <input
           type='text'

@@ -19,6 +19,9 @@ export default function Genre({ params }) {
   if (error) {
     return <h1>Error</h1>;
   }
+  if (!media.length) {
+    return null;
+  }
 
   return (
     <Layout>

@@ -1,10 +1,14 @@
 import Link from 'next/link';
 
+import { Button } from './Button';
+
 export const HomeLink = () => {
   return (
-    <div>
+    <div className='home-link'>
       <Link href='/'>
-        <a>← Back to home</a>
+        <a>
+          <Button> ← Back to home</Button>
+        </a>
       </Link>
     </div>
   );

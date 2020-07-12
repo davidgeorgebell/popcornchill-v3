@@ -5,7 +5,7 @@ export default function Nav() {
     <nav>
       <div className='logo-wrapper'>
         <Link href='/'>
-          <a>LOGO</a>
+          <a>POPCORNCHILL</a>
         </Link>
         <ul>
           <li>
@@ -26,6 +26,11 @@ export default function Nav() {
           <li>
             <Link href='/search'>
               <a>Search</a>
+            </Link>
+          </li>
+          <li>
+            <Link href='/genres'>
+              <a>Genres</a>
             </Link>
           </li>
           {/* <li>

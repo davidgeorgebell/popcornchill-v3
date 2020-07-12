@@ -21,7 +21,7 @@ export default function TopRated() {
   }
   return (
     <Layout>
-      <h1>Popular</h1>
+      <h1 className='title'>Popular</h1>
       {media && media.length && (
         <InfiniteScrolling
           pageNumber={pageNumber}
