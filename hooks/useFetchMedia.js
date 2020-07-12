@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useFetchMedia(type, category, pageNumber) {
+export function useFetchMedia(url, pageNumber) {
   const [media, setMedia] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -8,9 +8,7 @@ export function useFetchMedia(type, category, pageNumber) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/${type}/${category}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-GB&page=${pageNumber}&region=GB`
-        );
+        const response = await fetch(`${url}${pageNumber}`);
         const media = await response.json();
         const mediaFromApi = media.results;
 

@@ -1,8 +1,12 @@
+import Link from 'next/link';
+
 import Layout from '../../components/Layout';
 import { imageUrl } from '../../utils/imageUrl';
+import { useContext } from 'react';
+import { GenreContext } from '../../contexts/GenreContext';
 
 export default function Movie({ movieDetails }) {
-  console.log(movieDetails);
+  const { addGenreToState } = useContext(GenreContext);
 
   const {
     title,
@@ -24,7 +28,11 @@ export default function Movie({ movieDetails }) {
         <p>Runtime: {runtime}mins</p>
         <ul>
           {movieDetails.genres.map((genre, index) => (
-            <li key={index}>{genre.name}</li>
+            <li key={index}>
+              <Link href='/genre/[id]' as={`/genre/${genre.id}`}>
+                <a onClick={() => addGenreToState(genre.name)}>{genre.name}</a>
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
