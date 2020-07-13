@@ -9,6 +9,10 @@
 - Hosted on Zeit
 - CSS
 
+## Description
+
+Minimalist website for finding movie reviews and other information about movies. With built in search functionality.
+
 <img src='/public/s1.png' />
 <img src='/public/s2.png' />
 <img src='/public/s3.png' />
