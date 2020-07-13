@@ -8,7 +8,7 @@
   --accents-1: #111111;
   --accents-2: #333333;
   --accents-3: #444444;
-  --accents-4: #666666;
+  --accents-4: #696969;
   --accents-5: #888888;
   --accents-6: #999999;
   --accents-7: #eaeaea;
@@ -145,7 +145,7 @@ p {
 
 .container {
   margin: 0 auto;
-  padding: var(--flow-space) var(--flow-space);
+  padding: var(--flow-space) var(--flow-mid);
 }
 
 .title {
@@ -313,4 +313,59 @@ p {
   color: var(--bg);
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
+}
+
+/* ============ Nav Bar =============== */
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--flow-large) 0;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-list-item {
+  list-style-type: none;
+  margin: 0 0.5em;
+}
+.nav-link {
+  text-transform: capitalize;
+  font-weight: 100;
+  font-size: 0.8em;
+  color: var(--accents-4);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: var(--bg);
+}
+.icon {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .logo-wrapper {
+    padding-bottom: var(--flow-space);
+  }
+}
+
+/* ============= Search Page =================== */
+
+.search-form {
+  margin-bottom: var(--flow-large);
+  display: flex;
+  justify-content: flex-start;
+}
+.search-input {
+  font-size: 0.875rem;
+  border: 1px solid var(--accents-6);
+  padding: 0.8rem 1rem;
+  -moz-appearance: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
 }

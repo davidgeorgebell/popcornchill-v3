@@ -21,17 +21,23 @@ export default function Search() {
   const handleSubmit = e => {
     e.preventDefault();
     setSearched(userSearchInput);
+    setUserSearchInput('');
   };
 
   return (
     <Layout>
       <h1 className='title'>Search</h1>
-      <form type='submit' onSubmit={handleSubmit}>
+      <form
+        type='submit'
+        onSubmit={handleSubmit}
+        className='search-form center'>
         <input
+          className='search-input'
           type='text'
-          placeholder='type to search'
+          placeholder='Search...'
           onChange={handleSearch}
           required
+          value={userSearchInput}
         />
       </form>
       <ListData media={results} />

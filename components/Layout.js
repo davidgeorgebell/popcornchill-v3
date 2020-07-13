@@ -8,8 +8,6 @@ export default function Layout({ children, home }) {
         <Nav />
       </header>
       <main>{children}</main>
-
-      {!home ? <HomeLink home={home} /> : null}
     </div>
   );
 }

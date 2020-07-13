@@ -5,6 +5,7 @@ import { imageUrl } from '../../utils/imageUrl';
 import { useContext } from 'react';
 import { GenreContext } from '../../contexts/GenreContext';
 import { formatDate } from '../../utils/formatDate';
+import { HomeLink } from '../../components/HomeLink';
 
 export default function Movie({ movieDetails }) {
   const { addGenreToState } = useContext(GenreContext);
@@ -59,6 +60,7 @@ export default function Movie({ movieDetails }) {
           />
         </div>
       </div>
+      <HomeLink />
     </Layout>
   );
 }

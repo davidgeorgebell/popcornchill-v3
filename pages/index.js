@@ -11,15 +11,13 @@ import { GenreContext } from '../contexts/GenreContext';
 export default function Home({ popularMovies, topRated, genres }) {
   const { addGenreToState } = useContext(GenreContext);
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>popcornchill.com</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main>
-        <h1 className='center title'>Popcorn chill</h1>
-
         <h3 className='title'>Popular Movies</h3>
         <ScrollerList media={popularMovies} />
         <h3 className='title'>Top Rated Movies</h3>
