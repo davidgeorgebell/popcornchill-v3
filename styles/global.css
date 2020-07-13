@@ -145,13 +145,18 @@ p {
 
 .container {
   margin: 0 auto;
-  padding: var(--flow-space) var(--flow-mid);
+  padding: var(--flow-space) var(--flow-space);
 }
 
 .title {
   font-size: 4vw;
   margin-bottom: var(--flow-space);
   margin-top: var(--flow-space);
+  font-family: var(--font-fancy);
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 @media (max-width: 678px) {
   .title {
@@ -199,16 +204,31 @@ p {
   background: var(--alpha-light);
   cursor: pointer;
 }
-.bravo-btn {
-  background: var(--echo);
-  color: var(--fg);
-}
-.bravo-btn:hover {
-  background: var(--echo-light);
-}
 
 .home-link {
   margin: var(--flow-mid) 0;
+}
+
+/* ================ Header ====================== */
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-bottom: var(--flow-large);
+}
+.header-intro {
+  place-self: center;
+  min-height: 200px;
+  padding: var(--flow-space) 0;
+}
+.intro-title {
+  justify-self: center;
+  color: var(--golf);
+  font-family: var(--font-fancy);
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin-bottom: var(--flow-space);
+  font-size: 5vw;
 }
 
 /* =================== Home ===================== */
@@ -223,7 +243,7 @@ p {
 .scroller {
   overflow-x: scroll;
   overflow-y: hidden;
-  margin-bottom: var(--flow-mid);
+  margin-bottom: var(--flow-large);
 }
 .home-content-wrapper {
   padding: 1em;
@@ -273,7 +293,7 @@ p {
   color: var(--golf);
 }
 
-/* ========== movie ============== */
+/* ======================= Movie ========================== */
 
 .movie-page-wrapper {
   margin-bottom: var(--flow-large);
@@ -314,7 +334,8 @@ p {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: var(--flow-space) 0;
+  margin-top: var(--flow-space);
+  margin-bottom: var(--flow-mid);
 }
 .genre-list-item {
   margin-right: 1em;
@@ -339,8 +360,11 @@ p {
   font-weight: 100;
   font-size: 0.9rem;
 }
+.movie-summary-title {
+  font-size: 1.5em;
+}
 
-/* ============ Nav Bar =============== */
+/* ============ Nav Bar ======================================== */
 
 .nav-wrapper {
   display: flex;
@@ -370,6 +394,12 @@ p {
 }
 .icon {
   text-decoration: none;
+}
+.nav-link-logo {
+  text-decoration: none;
+  color: var(--bg);
+
+  font-weight: bolder;
 }
 
 @media (max-width: 768px) {

@@ -17,7 +17,16 @@ export default function Home({ popularMovies, topRated, genres }) {
         <title>popcornchill.com</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header>
+      <header className='header-wrapper'>
+        <div className='header-intro'>
+          <h2 className='intro-title '>
+            A movie and popcorn is all you really need.
+          </h2>
+          <p>
+            The simple way to find a movie reviews, whats showing and the
+            greatest films ever made.
+          </p>
+        </div>
         <AnimatedHero />
       </header>
 

@@ -18,7 +18,7 @@ export default function AnimatedHero() {
 
   useInterval(() => {
     setMessageToShow(messageToShow => messageToShow + 1);
-  }, 3000);
+  }, 2000);
 
   return (
     <div className='animated-hero-wrapper'>

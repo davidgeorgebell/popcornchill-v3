@@ -4,9 +4,11 @@ export default function Nav() {
   return (
     <nav className='nav-wrapper'>
       <div className='logo-wrapper'>
-        <Link href='/'>
-          <a className='logo'>POPCORNCHILL</a>
-        </Link>
+        <h1 className='logo'>
+          <Link href='/'>
+            <a className='nav-link-logo'>POPCORNCHILL</a>
+          </Link>
+        </h1>
       </div>
       <ul className='nav-list'>
         <li className='nav-list-item'>

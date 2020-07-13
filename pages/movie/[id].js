@@ -33,7 +33,7 @@ export default function Movie({ movieDetails }) {
       <div className='movie-page-wrapper'>
         <div className='movie-page-content-wrapper'>
           <YAnimation>
-            <h1 className='title'>{title}</h1>
+            <h2 className='title'>{title}</h2>
           </YAnimation>
           <XAnimation>
             <div className='movie-stats'>
@@ -61,7 +61,7 @@ export default function Movie({ movieDetails }) {
             ))}
           </ul>
           <YAnimationMid>
-            <h3 className='title'>Plot Summary</h3>
+            <h3 className='title movie-summary-title'>Plot Summary</h3>
           </YAnimationMid>
           <YAnimationSlow>
             <p>{overview}</p>
