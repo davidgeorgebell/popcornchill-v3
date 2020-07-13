@@ -16,6 +16,8 @@ export default function Search() {
 
   const { results } = response;
 
+  const oi = 1;
+
   if (error) {
     return <h1>Error</h1>;
   }
