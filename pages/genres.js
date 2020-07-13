@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import Link from 'next/link';
 
 import Layout from '../components/Layout';
-import useFetch from '../hooks/useFetch';
-import ListData from '../components/ListData';
 import { GenreContext } from '../contexts/GenreContext';
 import { GrowAnimation, YAnimation } from '../components/Animations';
 

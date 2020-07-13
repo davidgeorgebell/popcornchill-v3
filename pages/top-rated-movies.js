@@ -17,9 +17,7 @@ export default function TopRated() {
   if (error) {
     return <h1>Error</h1>;
   }
-  if (!media.length) {
-    return null;
-  }
+
   return (
     <Layout>
       <GrowAnimation>
