@@ -15,7 +15,7 @@ export default function Home({ popularMovies, topRated, genres }) {
     <Layout>
       <Head>
         <title>popcornchill.com</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/popcorn.png' />
       </Head>
       <header className='header-wrapper'>
         <div className='header-intro'>

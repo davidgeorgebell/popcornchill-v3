@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import { imageUrl } from '../utils/imageUrl';
-import GrowAnimation from './Animations';
 
 function ListData({ media }) {
   return (

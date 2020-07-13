@@ -1,7 +1,7 @@
 import { HomeLink } from './HomeLink';
 import Nav from './Nav';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className='container'>
       <header>

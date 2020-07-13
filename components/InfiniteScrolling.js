@@ -1,12 +1,7 @@
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-export function InfiniteScrolling({
-  children,
-  lengthOfMedia,
-  pageNumber,
-  setPageNumber,
-}) {
+export function InfiniteScrolling({ children, lengthOfMedia, setPageNumber }) {
   return (
     <InfiniteScroll
       dataLength={lengthOfMedia}

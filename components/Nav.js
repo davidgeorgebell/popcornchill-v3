@@ -41,17 +41,6 @@ export default function Nav() {
           </a>
         </Link>
       </div>
-
-      {/* <li>
-            <Link href='/top-rated-tv'>
-              <a>Top Rated TV</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='/popular-tv'>
-              <a>Popular TV</a>
-            </Link>
-          </li> */}
     </nav>
   );
 }

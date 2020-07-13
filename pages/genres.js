@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import Layout from '../components/Layout';
 import { GenreContext } from '../contexts/GenreContext';
-import { GrowAnimation, YAnimation } from '../components/Animations';
+import { GrowAnimation } from '../components/Animations';
 
 export default function Search({ genres }) {
   const { addGenreToState } = useContext(GenreContext);
