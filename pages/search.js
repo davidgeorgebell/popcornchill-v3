@@ -16,6 +16,13 @@ export default function Search() {
 
   const { results } = response;
 
+  if (error) {
+    return <h1>Error</h1>;
+  }
+  if (!media.length) {
+    return null;
+  }
+
   const handleSearch = e => {
     setUserSearchInput(e.target.value);
   };

@@ -216,6 +216,13 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-bottom: var(--flow-large);
 }
+@media (max-width: 678px) {
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .header-intro {
   place-self: center;
   min-height: 200px;
@@ -228,7 +235,6 @@ p {
   font-weight: bolder;
   letter-spacing: 2px;
   margin-bottom: var(--flow-space);
-  font-size: 5vw;
 }
 
 /* =================== Home ===================== */
@@ -426,6 +432,11 @@ p {
 }
 
 /* ============ Animated Hero ======================= */
+
+.animated-hero-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .walkthrough {
   width: 500px;
