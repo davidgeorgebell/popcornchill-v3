@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import Layout from '../components/Layout';
 import { getListsData } from '../lib/tmdbApi';
-import { imageUrl } from '../utils/imageUrl';
+import AnimatedHero from '../components/AnimatedHero';
 import ScrollerList from '../components/ScrollerList';
 import { useContext } from 'react';
 import { GenreContext } from '../contexts/GenreContext';
@@ -17,6 +17,9 @@ export default function Home({ popularMovies, topRated, genres }) {
         <title>popcornchill.com</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <header>
+        <AnimatedHero />
+      </header>
 
       <main>
         <XAnimation>

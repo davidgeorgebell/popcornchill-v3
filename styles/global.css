@@ -241,6 +241,12 @@ p {
 }
 /* ================ List Data ====================== */
 
+.animated-hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .no-image-holder {
   display: grid;
   place-items: center;
@@ -387,4 +393,125 @@ p {
   border-radius: 5px;
   width: 100%;
   max-width: 600px;
+}
+
+/* ============ Animated Hero ======================= */
+
+.walkthrough {
+  width: 500px;
+  margin: 0 auto;
+  background: var(--bg);
+  border-radius: 10px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .walkthrough {
+    min-width: 473px;
+  }
+}
+
+.typing.is-right .dots {
+  margin-left: auto;
+}
+
+.typing.is-left .dots {
+  margin-right: auto;
+}
+
+.dots {
+  grid-column-start: 2;
+  display: flex;
+  justify-content: space-between;
+  background: var(--delta-light);
+  padding: 10px;
+  border-radius: 50px;
+  width: 70px;
+}
+
+.dots > div {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: var(--delta);
+  animation: loader 1.5s infinite;
+}
+
+/* no margin on the far right dot */
+.dots > div:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* put a delay on each of the dots */
+.dots > div:first-child {
+  animation-delay: 0.1s;
+}
+
+.dots > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots > div:last-child {
+  animation-delay: 0.3s;
+}
+
+@keyframes loader {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.6);
+  }
+}
+
+.message,
+.typing {
+  display: grid;
+  grid-template-columns: 55px auto 55px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.message:last-child {
+  margin-bottom: 0;
+}
+
+.message:nth-child(even) > div:first-child {
+  opacity: 0;
+}
+
+.message:nth-child(odd) > div:last-child {
+  opacity: 0;
+}
+
+.avatar {
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--alpha);
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+}
+
+.message:nth-child(even) .text {
+  justify-content: flex-end;
+  background-color: var(--golf);
 }

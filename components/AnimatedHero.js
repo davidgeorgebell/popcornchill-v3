@@ -2,21 +2,18 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const messages = [
-  { text: "You're late." },
+  { text: 'Welcome to Popcorn Chill 🎉' },
   {
-    text:
-      'A Wizard is never late, Frodo Baggins,  nor is he early. He arrives precisely when he means to.',
+    text: 'The simple way to find a movie',
   },
-  { text: "It's wonderful to see you, Gandalf!" },
-  { text: " You didn't think I'd miss your Uncle Bilbo's birthday? " },
-  { text: 'What news of the outside world? Tell me everything!' },
+  { text: 'See the all the best and popular films' },
+  { text: 'And even whats at the cinema' },
   {
-    text:
-      'What, everything? Far too eager and curious for a Hobbit. Most unnatural...',
+    text: 'Enjoy!?!?!',
   },
 ];
 
-export default function App() {
+export default function AnimatedHero() {
   const [messageToShow, setMessageToShow] = useState(0);
 
   useInterval(() => {
@@ -24,7 +21,7 @@ export default function App() {
   }, 3000);
 
   return (
-    <div className='app'>
+    <div className='animated-hero-wrapper'>
       <div className='walkthrough'>
         {messages.map((message, index) => {
           const even = index % 2 === 0;
@@ -49,8 +46,8 @@ function Message({ message }) {
       initial={{ scale: 0.2 }}
       animate={{ scale: 1 }}>
       <div className='avatar'>
-        <span role='img' aria-label='hobbit'>
-          🧒🏻
+        <span role='img' aria-label='astronaut'>
+          👩‍🚀
         </span>
       </div>
       <div className='text'>{message.text}</div>
