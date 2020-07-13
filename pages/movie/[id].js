@@ -6,6 +6,13 @@ import { useContext } from 'react';
 import { GenreContext } from '../../contexts/GenreContext';
 import { formatDate } from '../../utils/formatDate';
 import { HomeLink } from '../../components/HomeLink';
+import {
+  GrowSlow,
+  YAnimation,
+  YAnimationMid,
+  YAnimationSlow,
+  XAnimation,
+} from '../../components/Animations';
 
 export default function Movie({ movieDetails }) {
   const { addGenreToState } = useContext(GenreContext);
@@ -25,17 +32,21 @@ export default function Movie({ movieDetails }) {
     <Layout>
       <div className='movie-page-wrapper'>
         <div className='movie-page-content-wrapper'>
-          <h1 className='title'>{title}</h1>
-          <div className='movie-stats'>
-            <p>
-              {vote_average}/10{' '}
-              <span aria-label='star' role='img'>
-                ⭐️
-              </span>
-            </p>{' '}
-            <p>{runtime}mins</p>
-            <p>{formatDate(release_date)}</p>
-          </div>
+          <YAnimation>
+            <h1 className='title'>{title}</h1>
+          </YAnimation>
+          <XAnimation>
+            <div className='movie-stats'>
+              <p>
+                {vote_average}/10{' '}
+                <span aria-label='star' role='img'>
+                  ⭐️
+                </span>
+              </p>{' '}
+              <p>{runtime}mins</p>
+              <p>{formatDate(release_date)}</p>
+            </div>
+          </XAnimation>
           <ul className='genre-list'>
             {movieDetails.genres.map((genre, index) => (
               <li key={index} className='genre-list-item'>
@@ -49,15 +60,21 @@ export default function Movie({ movieDetails }) {
               </li>
             ))}
           </ul>
-          <h3 className='title'>Plot Summary</h3>
-          <p>{overview}</p>
+          <YAnimationMid>
+            <h3 className='title'>Plot Summary</h3>
+          </YAnimationMid>
+          <YAnimationSlow>
+            <p>{overview}</p>
+          </YAnimationSlow>
         </div>
         <div className='movie-page-image-wrapper'>
-          <img
-            className=' movie-page-image'
-            src={`${imageUrl}${poster_path}`}
-            alt={title}
-          />
+          <GrowSlow>
+            <img
+              className=' movie-page-image'
+              src={`${imageUrl}${poster_path}`}
+              alt={title}
+            />
+          </GrowSlow>
         </div>
       </div>
       <HomeLink />

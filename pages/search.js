@@ -4,6 +4,7 @@ import { useFetchMedia } from '../hooks/useFetchMedia';
 import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
 import ListData from '../components/ListData';
+import { GrowAnimation } from '../components/Animations';
 
 export default function Search() {
   const [searched, setSearched] = useState('');
@@ -26,7 +27,9 @@ export default function Search() {
 
   return (
     <Layout>
-      <h1 className='title'>Search</h1>
+      <GrowAnimation>
+        <h1 className='title'>Search</h1>
+      </GrowAnimation>
       <form
         type='submit'
         onSubmit={handleSubmit}

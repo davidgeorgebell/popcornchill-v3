@@ -5,6 +5,7 @@ import ListData from '../../components/ListData';
 import { InfiniteScrolling } from '../../components/InfiniteScrolling';
 import { useFetchMedia } from '../../hooks/useFetchMedia';
 import { GenreContext } from '../../contexts/GenreContext';
+import { GrowAnimation } from '../../components/Animations';
 
 export default function Genre({ params }) {
   const { genre } = useContext(GenreContext);
@@ -25,7 +26,9 @@ export default function Genre({ params }) {
 
   return (
     <Layout>
-      <h1>{genre}</h1>
+      <GrowAnimation>
+        <h1 className='title'>{genre}</h1>
+      </GrowAnimation>
       {media && media.length && (
         <InfiniteScrolling
           pageNumber={pageNumber}

@@ -7,6 +7,7 @@ import { imageUrl } from '../utils/imageUrl';
 import ScrollerList from '../components/ScrollerList';
 import { useContext } from 'react';
 import { GenreContext } from '../contexts/GenreContext';
+import { XAnimation } from '../components/Animations';
 
 export default function Home({ popularMovies, topRated, genres }) {
   const { addGenreToState } = useContext(GenreContext);
@@ -18,9 +19,13 @@ export default function Home({ popularMovies, topRated, genres }) {
       </Head>
 
       <main>
-        <h3 className='title'>Popular Movies</h3>
+        <XAnimation>
+          <h3 className='title'>Popular Movies</h3>
+        </XAnimation>
         <ScrollerList media={popularMovies} />
-        <h3 className='title'>Top Rated Movies</h3>
+        <XAnimation>
+          <h3 className='title'>Top Rated Movies</h3>
+        </XAnimation>
         <ScrollerList media={topRated} />
         <div className='home-genres'>
           <ul className='home-genres'>

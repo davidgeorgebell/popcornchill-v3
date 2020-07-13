@@ -5,12 +5,16 @@ import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
 import ListData from '../components/ListData';
 import { GenreContext } from '../contexts/GenreContext';
+import { GrowAnimation, YAnimation } from '../components/Animations';
 
 export default function Search({ genres }) {
   const { addGenreToState } = useContext(GenreContext);
   return (
     <Layout>
-      <h1 className='title'>Genres</h1>
+      <GrowAnimation>
+        <h1 className='title'>Genres</h1>
+      </GrowAnimation>
+
       <ul className='genre-list'>
         {genres.map((genre, index) => (
           <li key={index} className='genre-list-item'>

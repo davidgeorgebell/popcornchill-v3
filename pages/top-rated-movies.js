@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import ListData from '../components/ListData';
 import { InfiniteScrolling } from '../components/InfiniteScrolling';
 import { useFetchMedia } from '../hooks/useFetchMedia';
+import { GrowAnimation } from '../components/Animations';
 
 export default function TopRated() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -21,7 +22,9 @@ export default function TopRated() {
   }
   return (
     <Layout>
-      <h1 className='title'>Top Rated Movies</h1>
+      <GrowAnimation>
+        <h1 className='title'>Top Rated Movies</h1>
+      </GrowAnimation>
       {media && media.length && (
         <InfiniteScrolling
           pageNumber={pageNumber}
