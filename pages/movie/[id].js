@@ -64,7 +64,7 @@ export default function Movie({ movieDetails }) {
             <h3 className='title movie-summary-title'>Plot Summary</h3>
           </YAnimationMid>
           <YAnimationSlow>
-            <p>{overview}</p>
+            <p className='movie-summary-overview'>{overview}</p>
           </YAnimationSlow>
         </div>
         <div className='movie-page-image-wrapper'>

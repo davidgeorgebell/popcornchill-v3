@@ -369,6 +369,9 @@ p {
 .movie-summary-title {
   font-size: 1.5em;
 }
+.movie-summary-overview {
+  padding-bottom: var(--flow-space);
+}
 
 /* ============ Nav Bar ======================================== */
 
