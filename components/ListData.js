@@ -21,12 +21,16 @@ function ListData({ media }) {
                 )}
                 <div className='center'>
                   <h3 className='list-data-title'>{media.title}</h3>
-                  <p className='list-data-rating'>
-                    {media.vote_average}{' '}
-                    <span role='img' aria-label='star'>
-                      ⭐️
-                    </span>
-                  </p>
+                  {media.vote_average ? (
+                    <p className='list-data-rating'>
+                      {media.vote_average}{' '}
+                      <span role='img' aria-label='star'>
+                        ⭐️
+                      </span>
+                    </p>
+                  ) : (
+                    <p>No reviews</p>
+                  )}
                 </div>
               </div>
             </a>
