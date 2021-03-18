@@ -31,9 +31,7 @@ export default function Search() {
 
   return (
     <Layout>
-      <GrowAnimation>
-        <h1 className='title'>Search</h1>
-      </GrowAnimation>
+      <h1 className='title'>Search</h1>
       <form
         type='submit'
         onSubmit={handleSubmit}

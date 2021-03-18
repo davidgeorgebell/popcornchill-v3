@@ -10,10 +10,7 @@ export default function Search({ genres }) {
   const { addGenreToState } = useContext(GenreContext);
   return (
     <Layout>
-      <GrowAnimation>
-        <h1 className='title'>Genres</h1>
-      </GrowAnimation>
-
+      <h1 className='title'>Genres</h1>
       <ul className='genre-list'>
         {genres.map((genre, index) => (
           <li key={index} className='genre-list-item'>

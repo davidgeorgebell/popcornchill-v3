@@ -22,9 +22,7 @@ export default function TopRated() {
   }
   return (
     <Layout>
-      <GrowAnimation>
-        <h1 className='title'>Top Rated Movies</h1>
-      </GrowAnimation>
+      <h1 className='title'>Top Rated Movies</h1>
       {media && media.length && (
         <InfiniteScrolling
           pageNumber={pageNumber}

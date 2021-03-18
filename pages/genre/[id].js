@@ -26,9 +26,7 @@ export default function Genre({ params }) {
 
   return (
     <Layout>
-      <GrowAnimation>
-        <h1 className='title'>{genre}</h1>
-      </GrowAnimation>
+      <h1 className='title'>{genre}</h1>
       {media && media.length && (
         <InfiniteScrolling
           pageNumber={pageNumber}
